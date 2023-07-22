@@ -1,0 +1,639 @@
+﻿@model ResultadosViewModel 
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<form asp-action="Index" method="post">
+    <div class="container mt-4">
+
+
+        <div class="mb-3">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">1. ¿Qué tipo de actividades te gusta realizar en tu tiempo libre?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta1" id="res1pe1" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe1">Leer o actividades artísticas</label>
+
+                    <input type="radio" class="btn-check" name="pregunta1" id="res2pe1" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe1">Practicar deportes o actividades físicas</label>
+
+                    <input type="radio" class="btn-check" name="pregunta1" id="res3pe1" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe1">Socializar con amigos o familia</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">2. ¿Qué área te parece más interesante?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta2" id="res1pe2" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe2">Ciencias y Tecnología</label>
+
+                    <input type="radio" class="btn-check" name="pregunta2" id="res2pe2" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe2">Humanidades y Artes</label>
+
+                    <input type="radio" class="btn-check" name="pregunta2" id="res3pe2" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe2">Ciencias Sociales y Comunicación</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">3. ¿Cómo te sientes acerca de los desafíos?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta3" id="res1pe3" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe3">Me encanta enfrentar nuevos desafíos</label>
+
+                    <input type="radio" class="btn-check" name="pregunta3" id="res2pe3" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe3">Los acepto con cautela, pero los enfrento</label>
+
+                    <input type="radio" class="btn-check" name="pregunta3" id="res3pe3" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe3">Prefiero evitar los desafíos</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">4. ¿Qué entorno laboral prefieres?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta4" id="res1pe4" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe4">Un laboratorio o espacio tranquilo</label>
+
+                    <input type="radio" class="btn-check" name="pregunta4" id="res2pe4" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe4">Un espacio abierto o dinámico</label>
+
+                    <input type="radio" class="btn-check" name="pregunta4" id="res3pe4" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe4">Una oficina o ambiente estructurado</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">5. ¿Qué tipo de materias te interesan más?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta5" id="res1pe5" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe5">Matemáticas y Física</label>
+
+                    <input type="radio" class="btn-check" name="pregunta5" id="res2pe5" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe5">Literatura y Filosofía</label>
+
+                    <input type="radio" class="btn-check" name="pregunta5" id="res3pe5" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe5">Historia y Política</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">6. ¿Qué habilidad te gustaría desarrollar más?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta6" id="res1pe6" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe6">Pensamiento lógico y resolución de problemas</label>
+
+                    <input type="radio" class="btn-check" name="pregunta6" id="res2pe6" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe6">Creatividad y expresión artística</label>
+
+                    <input type="radio" class="btn-check" name="pregunta6" id="res3pe6" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe6">Comunicación y habilidades sociales</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">7. ¿Qué te motiva más en un trabajo?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta7" id="res1pe7" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe7">Contribuir al avance de la ciencia o tecnología</label>
+
+                    <input type="radio" class="btn-check" name="pregunta7" id="res2pe7" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe7">Expresar tus ideas y emociones</label>
+
+                    <input type="radio" class="btn-check" name="pregunta7" id="res3pe7" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe7">Ayudar y mejorar la vida de otras personas</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">8. ¿Cómo te sientes acerca de los números?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta8" id="res1pe8" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe8">Me gustan y los entiendo bien</label>
+
+                    <input type="radio" class="btn-check" name="pregunta8" id="res2pe8" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe8">Me siento cómodo con ellos</label>
+
+                    <input type="radio" class="btn-check" name="pregunta8" id="res3pe8" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe8">Me resultan difíciles o desagradables</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">9. ¿Qué tipo de libros o películas prefieres?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta9" id="res1pe9" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe9">Ciencia ficción y tecnología</label>
+
+                    <input type="radio" class="btn-check" name="pregunta9" id="res2pe9" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe9">Drama y arte</label>
+
+                    <input type="radio" class="btn-check" name="pregunta9" id="res3pe9" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe9">Comedias y temas sociales</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">10. ¿Cuál de estas actividades prefieres?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta10" id="res1pe10" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe10">Resolver problemas matemáticos o enigmas</label>
+
+                    <input type="radio" class="btn-check" name="pregunta10" id="res2pe10" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe10">Escribir historias o poemas</label>
+
+                    <input type="radio" class="btn-check" name="pregunta10" id="res3pe10" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe10">Ayudar en actividades comunitarias</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">11. ¿Qué tipo de proyectos te atraen más?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta11" id="res1pe11" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe11">Investigación científica</label>
+
+                    <input type="radio" class="btn-check" name="pregunta11" id="res2pe11" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe11">Proyectos de diseño o creación artística</label>
+
+                    <input type="radio" class="btn-check" name="pregunta11" id="res3pe11" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe11">Iniciativas sociales o de voluntariado</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">12. ¿Qué te gustaría aprender más?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta12" id="res1pe12" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe12">Programación y desarrollo de software</label>
+
+                    <input type="radio" class="btn-check" name="pregunta12" id="res2pe12" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe12">Técnicas de pintura o escultura</label>
+
+                    <input type="radio" class="btn-check" name="pregunta12" id="res3pe12" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe12">Habilidades de liderazgo y trabajo en equipo</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">13. ¿Cuál de estas habilidades consideras que tienes?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta13" id="res1pe13" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe13">Análisis lógico y capacidad de abstracción</label>
+
+                    <input type="radio" class="btn-check" name="pregunta13" id="res2pe13" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe13">Imaginación y capacidad creativa</label>
+
+                    <input type="radio" class="btn-check" name="pregunta13" id="res3pe13" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe13">Empatía y habilidades sociales</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">14. ¿Qué tipo de lugares disfrutas más visitando?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta14" id="res1pe14" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe14">Museos y centros científicos</label>
+
+                    <input type="radio" class="btn-check" name="pregunta14" id="res2pe14" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe14">Galerías de arte y conciertos</label>
+
+                    <input type="radio" class="btn-check" name="pregunta14" id="res3pe14" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe14">Parques o lugares al aire libre</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">15. ¿Cómo te sientes acerca de la tecnología y su influencia en la sociedad?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta15" id="res1pe15" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe15">Fascinado/a y emocionado/a por su avance</label>
+
+                    <input type="radio" class="btn-check" name="pregunta15" id="res2pe15" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe15">Aprecio sus aportes pero también sus desafíos</label>
+
+                    <input type="radio" class="btn-check" name="pregunta15" id="res3pe15" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe15">Preferiría prescindir de ciertas tecnologías</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">16. ¿Qué te parece más interesante en una persona?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta16" id="res1pe16" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe16">Inteligencia y conocimientos sólidos</label>
+
+                    <input type="radio" class="btn-check" name="pregunta16" id="res2pe16" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe16">Creatividad y originalidad</label>
+
+                    <input type="radio" class="btn-check" name="pregunta16" id="res3pe16" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe16">Empatía y comprensión hacia los demás</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">17. ¿Qué tipo de actividades te sientes más cómodo/a liderando?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta17" id="res1pe17" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe17">Proyectos de investigación y desarrollo</label>
+
+                    <input type="radio" class="btn-check" name="pregunta17" id="res2pe17" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe17">Producciones artísticas o culturales</label>
+
+                    <input type="radio" class="btn-check" name="pregunta17" id="res3pe17" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe17">Actividades sociales o comunitarias</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">18. ¿Qué preferirías aprender a hacer?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta18" id="res1pe18" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe18">Programar aplicaciones o software</label>
+
+                    <input type="radio" class="btn-check" name="pregunta18" id="res2pe18" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe18">Tocar un instrumento musical</label>
+
+                    <input type="radio" class="btn-check" name="pregunta18" id="res3pe18" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe18">Organizar eventos o actividades recreativas</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">19. ¿Qué área te parece más emocionante en el futuro?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta19" id="res1pe19" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe19">Inteligencia artificial y robótica</label>
+
+                    <input type="radio" class="btn-check" name="pregunta19" id="res2pe19" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe19">Expresiones artísticas y entretenimiento</label>
+
+                    <input type="radio" class="btn-check" name="pregunta19" id="res3pe19" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe19">Medicina y ciencias de la salud</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">20. ¿Qué te gustaría aportar a tu comunidad o al mundo?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta20" id="res1pe20" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe20">Nuevos conocimientos y tecnologías</label>
+
+                    <input type="radio" class="btn-check" name="pregunta20" id="res2pe20" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe20">Inspiración y emociones a través del arte</label>
+
+                    <input type="radio" class="btn-check" name="pregunta20" id="res3pe20" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe20">Ayuda y apoyo a quienes lo necesiten</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">21. ¿Cuál de estos temas te interesa más?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta21" id="res1pe21" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe21">Inteligencia artificial y aprendizaje automático</label>
+
+                    <input type="radio" class="btn-check" name="pregunta21" id="res2pe21" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe21">Historia del arte y movimientos culturales</label>
+
+                    <input type="radio" class="btn-check" name="pregunta21" id="res3pe21" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe21">Política y justicia social</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">22. ¿Qué tipo de trabajo te parece más atractivo?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta22" id="res1pe22" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe22">Investigador/a científico/a</label>
+
+                    <input type="radio" class="btn-check" name="pregunta22" id="res2pe22" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe22">Artista o diseñador/a</label>
+
+                    <input type="radio" class="btn-check" name="pregunta22" id="res3pe22" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe22">Trabajador/a social o voluntario/a</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">23. ¿Qué te atrae más de la ciencia y la investigación?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta23" id="res1pe23" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe23">Descubrir nuevos conocimientos y avances</label>
+
+                    <input type="radio" class="btn-check" name="pregunta23" id="res2pe23" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe23">Expresar tus ideas e interpretaciones</label>
+
+                    <input type="radio" class="btn-check" name="pregunta23" id="res3pe23" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe23">Aplicar soluciones con impacto social</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">24. ¿Qué tipo de entorno laboral prefieres?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta24" id="res1pe24" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe24">Laboratorio de investigación científica</label>
+
+                    <input type="radio" class="btn-check" name="pregunta24" id="res2pe24" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe24">Estudio de arte o diseño</label>
+
+                    <input type="radio" class="btn-check" name="pregunta24" id="res3pe24" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe24">Espacios con interacción y ayuda a otros</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">25. ¿Qué te parece más satisfactorio?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta25" id="res1pe25" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe25">Resolver un problema complejo</label>
+
+                    <input type="radio" class="btn-check" name="pregunta25" id="res2pe25" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe25">Crear algo nuevo y original</label>
+
+                    <input type="radio" class="btn-check" name="pregunta25" id="res3pe25" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe25">Ayudar a alguien a mejorar su vida</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">26. ¿Qué tipo de habilidades te gustaría desarrollar más?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta26" id="res1pe26" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe26">Razonamiento lógico y análisis de datos</label>
+
+                    <input type="radio" class="btn-check" name="pregunta26" id="res2pe26" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe26">Habilidades artísticas o creativas</label>
+
+                    <input type="radio" class="btn-check" name="pregunta26" id="res3pe26" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe26">Comunicación efectiva y empatía</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">27. ¿Qué te gustaría lograr en tu vida profesional?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta27" id="res1pe27" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe27">Hacer descubrimientos importantes en mi campo</label>
+
+                    <input type="radio" class="btn-check" name="pregunta27" id="res2pe27" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe27">Dejar una huella artística significativa</label>
+
+                    <input type="radio" class="btn-check" name="pregunta27" id="res3pe27" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe27">Mejorar la vida de las personas que me rodean</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">28. ¿Cómo sueles enfrentar los desafíos o dificultades?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta28" id="res1pe28" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe28">Buscando soluciones lógicas y precisas</label>
+
+                    <input type="radio" class="btn-check" name="pregunta28" id="res2pe28" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe28">Encontrando inspiración y expresando emociones</label>
+
+                    <input type="radio" class="btn-check" name="pregunta28" id="res3pe28" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe28">Colaborando con otros y brindando apoyo</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">29. ¿Qué te motiva a seguir aprendiendo y mejorando?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta29" id="res1pe29" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe29">El deseo de resolver problemas complejos</label>
+
+                    <input type="radio" class="btn-check" name="pregunta29" id="res2pe29" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe29">El placer de crear algo nuevo y original</label>
+
+                    <input type="radio" class="btn-check" name="pregunta29" id="res3pe29" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe29">El impacto positivo que puedo generar en otros</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="form-label">30. ¿Cuál de las siguientes opciones describe mejor tu personalidad?</h6>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="btn-group" role="group" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="pregunta30" id="res1pe30" value="3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res1pe30">Racional, analítico/a y objetivo/a</label>
+
+                    <input type="radio" class="btn-check" name="pregunta30" id="res2pe30" value="2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res2pe30">Creativo/a, imaginativo/a y expresivo/a</label>
+
+                    <input type="radio" class="btn-check" name="pregunta30" id="res3pe30" value="1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary" for="res3pe30">Compasivo/a, solidario/a y colaborador/a</label>
+                </div>
+            </div>
+        </div>
+
+        @*Contendor Form Correo*@
+
+        <div class="container justify-content-center">
+            <hr class="bg-danger" />
+            <h4 class="fw-bold">Respuestas</h4>
+            <hr class="bg-danger" />
+            <p>Para poder enviarte los resultados a tu correo necesitaremos los siguientes datos:</p>
+            
+                <div class="row">
+                    <div class="d-grid gap-2 col-6 mx-auto mb-3">
+                        <label class="col-form-label" asp-for="Nombre"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input class="form-control" asp-for="Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto mb-3">
+                        <button class="btn btn-light" type="submit">Enviar</button>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
